@@ -65,9 +65,9 @@ function App() {
   }, []); //최초 한번만 작동
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    setStorage();
-  }, [todo]); //최초 한번, todo의 값이 변경되면 실행
+  // useEffect(() => {
+  //   setStorage();
+  // }, [todo]); //최초 한번, todo의 값이 변경되면 실행
 
   return (
     <div className="App">
