@@ -54,6 +54,8 @@ function App() {
     setTodo(newTodos);
     document.querySelector('#todo').value = '';
   };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const setStorage = () => {
     const todoStr = JSON.stringify(todo);
     window.localStorage.setItem('todo', todoStr);
@@ -62,6 +64,7 @@ function App() {
     getTodoList();
   }, []); //최초 한번만 작동
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setStorage();
   }, [todo]); //최초 한번, todo의 값이 변경되면 실행
