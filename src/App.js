@@ -16,8 +16,8 @@ function App() {
 
   const getTodoList = () => {
     const todoListFromStorage = window.localStorage.getItem('todo');
-    //console.log(todoListFromStorage);
-    if (todoListFromStorage !== null) {
+    console.log(todoListFromStorage);
+    if (todoListFromStorage !== null && todoListFromStorage !== '[]') {
       //값이 있으면
       const todoObj = JSON.parse(todoListFromStorage);
       //console.log(todoObj);
@@ -65,7 +65,7 @@ function App() {
 
   useEffect(() => {
     setStorage();
-  }, [todo, setStorage]); //최초 한번, todo의 값이 변경되면 실행
+  }, [todo]); //최초 한번, todo의 값이 변경되면 실행
 
   return (
     <div className="App">
